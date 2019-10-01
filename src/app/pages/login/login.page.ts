@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { NavController } from '@ionic/angular';
@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
     private auth: AuthService,
     private fb: FormBuilder,
     private navCtrl: NavController,
-    private activated
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
     const credential = this.auth.loginWithEmail
     (this.formLogin.value);
     console.log(credential);
-    this.navCtrl.navigateForward(this.acti)
+    this.navCtrl.navigateForward(this.activatedRoute.snapshot.queryParamMap.get('redirect') || 'tabs/dashboard');
     // return this.router.navigate(['/tabs/dashboard']);
   }
 }
