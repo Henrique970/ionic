@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyD4dKdph0-UpC3klL_SZmHEmLBM3i5fThI",
-    authDomain: "contas-no-azul.firebaseapp.com",
-    databaseURL: "https://contas-no-azul.firebaseio.com",
-    projectId: "contas-no-azul",
-    storageBucket: "contas-no-azul.appspot.com",
-    messagingSenderId: "770949572159",
-    appId: "1:770949572159:web:f0274723abcb166536ba8a"
+  firebase:{
+    apiKey: "AIzaSyC6VH-ZYhniHfmFr0ki95ev4iZP8zV_v-4",
+    authDomain: "contas-no-azul-2d263.firebaseapp.com",
+    databaseURL: "https://contas-no-azul-2d263.firebaseio.com",
+    projectId: "contas-no-azul-2d263",
+    storageBucket: "contas-no-azul",
+    messagingSenderId: "813608204590",
+    appId: "1:813608204590:web:be5d99ec0ec7686c93a2bf"
   }
 };
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,9 @@ export class LoginPage implements OnInit {
   constructor(
     private router: Router,
     private auth: AuthService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private navCtrl: NavController,
+    private activated
   ) { }
 
   ngOnInit() {
@@ -30,8 +33,10 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    const credential = this.auth.loginWithEmail(this.formLogin.value);
+    const credential = this.auth.loginWithEmail
+    (this.formLogin.value);
     console.log(credential);
+    this.navCtrl.navigateForward(this.acti)
     // return this.router.navigate(['/tabs/dashboard']);
   }
 }
